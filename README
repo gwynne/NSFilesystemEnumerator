@@ -1,0 +1,4 @@
+NSFilesystemEnumerator
+======================
+
+This is just a fairly simple Cocoa API wrapped around the `fts(3)` set of functions, based on `NSEnumerator`.
