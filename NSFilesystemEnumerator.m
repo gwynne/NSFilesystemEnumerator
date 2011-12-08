@@ -163,6 +163,9 @@
 						  withOptions:(NSFilesystemEnumerationOptions)options_
 							 callback:(BOOL (^)(NSFilesystemEntry *entry))callback
 {
+	if (!callback)
+		return;
+
 	NSFilesystemEnumerator		*enumerator = [self filesystemEnumeratorRootedAt:rootPath_ withOptions:options_];
 	NSFilesystemEntry			*obj = nil;
 	
@@ -177,6 +180,9 @@
 						  withOptions:(NSFilesystemEnumerationOptions)options_
 						  rawCallback:(BOOL (^)(const FTSENT *entry))callback
 {
+	if (!callback)
+		return;
+
 	NSFilesystemEnumerator		*enumerator = [self filesystemEnumeratorRootedAt:rootPath_ withOptions:options_];
 	const FTSENT				*obj = NULL;
 	
